@@ -1,0 +1,218 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import '@fontsource-variable/archivo/wdth.css';
+import '../../styles/teardown.css';
+import { shop, promises, builds, reviewList, whatsappLink, askMessage, askAbout, price } from '../../data/site';
+import { photo, cutout } from '../../lib/images';
+
+const ask = whatsappLink(askMessage);
+const quotes = [reviewList[0], reviewList[2], reviewList[3]];
+const steps = [
+  {
+    title: 'Tell us the number',
+    body: 'Message your budget and what you play or work on. No spec knowledge needed.',
+  },
+  {
+    title: 'We spec it with you',
+    body: 'You get a parts list with a price, and a straight answer on what is worth paying for.',
+  },
+  {
+    title: 'Built, tested, handed over',
+    body: 'Assembled and stress tested in the shop. Collect from Ang Mo Kio or have it delivered.',
+  },
+];
+---
+
+<Base
+  title="Excelsior Systems: custom PCs built in Ang Mo Kio"
+  description="Custom gaming and workstation PCs, specced to your budget, built and stress tested in Singapore. 5.0 from 1,682 Carousell reviews."
+  theme="#07080b"
+>
+  <header class="bar">
+    <a class="mark" href="#main" aria-label="Excelsior Systems, back to top">Excelsior <span>Systems</span></a>
+    <nav aria-label="Sections">
+      <a href="#builds">Builds</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn--line" href={ask} target="_blank" rel="noopener">WhatsApp us</a>
+  </header>
+
+  <main id="main">
+    <section class="stage" data-stage aria-label="How an Excelsior PC comes together">
+      <div class="stage__pin">
+        <canvas aria-hidden="true"></canvas>
+        <Image class="stage__fallback" src={photo('b07')} alt="A white custom PC with lit fans, built by Excelsior Systems" widths={[640, 1080]} sizes="100vw" loading="eager" />
+        <div class="stage__labels" data-labels aria-hidden="true"></div>
+        <div class="stage__shade" aria-hidden="true"></div>
+
+        <div class="chapters">
+          <div class="chapter is-active" data-chapter>
+            <h1>A PC built around you</h1>
+            <p>
+              Excelsior Systems builds custom gaming and workstation PCs in Ang Mo Kio. Tell us your budget and what
+              you play. We spec it, build it and stress test it, often the same day.
+            </p>
+            <div class="chapter__act">
+              <a class="btn" href={ask} target="_blank" rel="noopener">Message us on WhatsApp</a>
+              <span class="proof">{shop.rating} from {shop.reviews} Carousell reviews</span>
+            </div>
+          </div>
+
+          <div class="chapter" data-chapter>
+            <h2>Every part chosen for a reason</h2>
+            <p>
+              Nothing goes in because it costs more. We match each part to your budget, and tell you which ones you can
+              skip.
+            </p>
+            <blockquote>
+              “{reviewList[0].text}”
+              <cite>{reviewList[0].user}, Carousell</cite>
+            </blockquote>
+          </div>
+
+          <div class="chapter" data-chapter>
+            <h2>Assembled and stress tested</h2>
+            <p>
+              Brand-new parts from local distributors, put together in our shop and run hard before they leave it. Every
+              build carries a local warranty.
+            </p>
+            <blockquote>
+              “{reviewList[1].text}”
+              <cite>{reviewList[1].user}, Carousell</cite>
+            </blockquote>
+          </div>
+
+          <div class="chapter" data-chapter>
+            <h2>{shop.reviews} reviews. Five stars.</h2>
+            <p>We have been building since {shop.since}, and the rating has not slipped. The builds below are what we are making this month.</p>
+            <div class="chapter__act">
+              <a class="btn" href="#builds">See the builds</a>
+              <a class="link" href={shop.carousell} target="_blank" rel="noopener">Read the reviews</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticks" aria-hidden="true">
+          <i class="is-active" data-tick></i><i data-tick></i><i data-tick></i><i data-tick></i>
+        </div>
+        <p class="hint" aria-hidden="true">Scroll to open it up</p>
+      </div>
+    </section>
+
+    <div class="ribbon" aria-label="What comes with every build">
+      <ul>
+        {promises.map((p) => <li>{p}</li>)}
+      </ul>
+      <ul aria-hidden="true">
+        {promises.map((p) => <li>{p}</li>)}
+      </ul>
+    </div>
+
+    <section class="builds" id="builds">
+      <div class="head">
+        <h2>Builds, by budget</h2>
+        <p>
+          Listed prices as of 1 October 2026. Every one can be changed: a different case, more storage, another
+          graphics card.
+        </p>
+      </div>
+      <ol class="rows">
+        {
+          builds.map((b) => (
+            <li>
+              <a class="row" href={askAbout(b)} target="_blank" rel="noopener">
+                <span class="row__img">
+                  <Image src={cutout(b.image) ?? photo(b.image)} alt="" widths={[160, 320]} sizes="120px" />
+                </span>
+                <span class="row__name">
+                  <b>{b.cpu}</b>
+                  <span>{b.gpu}</span>
+                </span>
+                <span class="row__specs">{b.specs.join(' · ')}</span>
+                <span class="row__price">
+                  {b.was && <s>{price(b.was)}</s>}
+                  {price(b.price)}
+                </span>
+                <span class="row__ask">Ask about this build</span>
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+      <p class="builds__open">
+        Budget somewhere in between? <a href={ask} target="_blank" rel="noopener">Tell us the number</a> and we will spec to it.
+      </p>
+    </section>
+
+    <section class="record" id="reviews">
+      <div class="head">
+        <h2>On the record</h2>
+        <p>Word for word from buyers on Carousell, where we hold {shop.rating} across {shop.reviews} reviews.</p>
+      </div>
+      <div class="quotes">
+        {
+          quotes.map((q) => (
+            <figure>
+              <blockquote>“{q.text}”</blockquote>
+              <figcaption>
+                {q.user} <span>{q.when}</span>
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+      <a class="link" href={shop.carousell} target="_blank" rel="noopener">Read all {shop.reviews} on Carousell</a>
+    </section>
+
+    <section class="how">
+      <h2>From message to machine</h2>
+      <ol>
+        {
+          steps.map((s) => (
+            <li>
+              <h3>{s.title}</h3>
+              <p>{s.body}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="visit" id="visit">
+      <Image class="visit__img" src={photo('b12')} alt="An amber-lit custom PC built by Excelsior Systems" widths={[640, 1080, 1400]} sizes="(min-width: 900px) 50vw, 100vw" />
+      <div class="visit__body">
+        <h2>You can only do better</h2>
+        <p>Walk in, or message first and we will have a parts list ready when you arrive.</p>
+        <address>
+          {shop.address.map((l) => <span>{l}</span>)}
+          <a href={`tel:${shop.phone.replace(/\s/g, '')}`}>{shop.phone}</a>
+        </address>
+        <a class="btn" href={ask} target="_blank" rel="noopener">Message us on WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="mark">Excelsior <span>Systems</span></p>
+    <ul>
+      <li><a href={shop.carousell} target="_blank" rel="noopener">Carousell</a></li>
+      <li><a href={shop.instagram} target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href={import.meta.env.BASE_URL}>Other concept</a></li>
+    </ul>
+    <p class="foot__note">Concept site. Prices, specs and reviews are from Excelsior Systems’ Carousell page on 1 October 2026.</p>
+  </footer>
+</Base>
+
+<script>
+  import { mountStage } from '../../lib/stage';
+  const stage = document.querySelector<HTMLElement>('[data-stage]');
+  if (stage) mountStage(stage);
+
+  const bar = document.querySelector('.bar');
+  // The bar stays clear over the pinned stage and turns solid once the page scrolls on.
+  const onScroll = () => bar?.classList.toggle('is-solid', !!stage && window.scrollY > stage.offsetHeight - 72);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>

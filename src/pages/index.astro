@@ -1,0 +1,157 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import '@fontsource-variable/hanken-grotesk';
+import { photo, cutout } from '../lib/images';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Base
+  title="Excelsior Systems: two site concepts"
+  description="Two website directions for Excelsior Systems, a custom PC builder in Ang Mo Kio, Singapore."
+  theme="#13151b"
+>
+  <main id="main">
+    <a class="half half--light" href={`${base}edit/`}>
+      <Image src={cutout('b14')} alt="" widths={[400, 800]} sizes="(min-width: 760px) 34vw, 70vw" loading="eager" />
+      <h2>The storefront</h2>
+      <p>Light and editorial. Their own build photos carry the page, with a curved photo ring in the hero.</p>
+      <span>Open concept one</span>
+    </a>
+    <a class="half half--dark" href={`${base}teardown/`}>
+      <Image src={photo('b07')} alt="" widths={[400, 800]} sizes="(min-width: 760px) 34vw, 70vw" loading="eager" />
+      <h2>The teardown</h2>
+      <p>Dark and cinematic. A 3D PC comes apart part by part as you scroll, then rebuilds.</p>
+      <span>Open concept two</span>
+    </a>
+    <h1>Excelsior Systems, two ways</h1>
+  </main>
+</Base>
+
+<style is:global>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #13151b;
+    font-family: 'Hanken Grotesk Variable', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .skip {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 10;
+    padding: 0.7rem 1rem;
+    background: #fff;
+    color: #13151b;
+    transform: translateY(-200%);
+  }
+
+  .skip:focus {
+    transform: none;
+  }
+
+  main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100svh;
+  }
+
+  h1 {
+    position: absolute;
+    top: clamp(1.25rem, 3vw, 2.25rem);
+    left: 50%;
+    margin: 0;
+    padding: 0.55rem 1.1rem;
+    border-radius: 999px;
+    background: #13151b;
+    color: #f3f4f7;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    transform: translateX(-50%);
+  }
+
+  .half {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(5rem, 9vw, 8rem) clamp(1.5rem, 5vw, 5rem) clamp(2.5rem, 5vw, 4.5rem);
+    text-decoration: none;
+  }
+
+  .half--light {
+    background: #f3f4f7;
+    color: #13151b;
+  }
+
+  .half--dark {
+    background: #07080b;
+    color: #eef1f6;
+  }
+
+  .half img {
+    width: min(100%, 26rem);
+    height: auto;
+    margin-bottom: auto;
+    align-self: center;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .half--light img {
+    filter: drop-shadow(0 30px 30px rgb(19 21 27 / 0.28));
+  }
+
+  .half:hover img {
+    transform: scale(1.04);
+  }
+
+  h2 {
+    margin: 2.5rem 0 0;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  p {
+    max-width: 26rem;
+    margin: 0.9rem 0 1.5rem;
+    opacity: 0.78;
+  }
+
+  span {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-transform: uppercase;
+    text-underline-offset: 0.45em;
+  }
+
+  :focus-visible {
+    outline: 2px solid #2fb4ff;
+    outline-offset: -6px;
+  }
+
+  @media (max-width: 760px) {
+    main {
+      grid-template-columns: 1fr;
+    }
+
+    .half img {
+      width: min(70%, 18rem);
+    }
+  }
+</style>

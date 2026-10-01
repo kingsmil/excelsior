@@ -1,0 +1,347 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import '@fontsource-variable/bodoni-moda/opsz.css';
+import '@fontsource-variable/bodoni-moda/opsz-italic.css';
+import '@fontsource-variable/hanken-grotesk';
+import '../../styles/edit.css';
+import { shop, promises, builds, reviewList, whatsappLink, askMessage, askAbout, price, buildName } from '../../data/site';
+import { photo, cutout } from '../../lib/images';
+
+const ask = whatsappLink(askMessage);
+const byId = (id: string) => builds.find((b) => b.id === id)!;
+
+const ring = ['b02', 'b15', 'b05', 'b12', 'b07', 'b11', 'b04', 'b16', 'b08', 'b10', 'b03', 'b06'];
+const strip = ['b10', 'b02', 'b12', 'b05', 'b16', 'b04', 'b11', 'b15'];
+
+const ranges = [
+  { name: 'Gaming', line: 'Specced for the games you actually play.', image: 'b15' },
+  { name: 'Workstation', line: 'For editing, rendering and long days.', image: 'b11' },
+  { name: 'Home office', line: 'A quiet desk set, monitor included.', image: 'b13' },
+];
+
+const featured = ['9800x3d-rtx5080', '7700x-rx9070xt', '7800x3d-rx9070xt', '7700-rtx5060'].map(byId);
+const byBudget = ['9850x3d-rtx5080', '7700-rtx5070ti', '7700-rx9060xt', '5600x-rtx5060', '5600x-rtx3050', '5500gt-office-set'].map(byId);
+const quotes = [reviewList[2], reviewList[3], reviewList[4]];
+const Arrow = 'M3 8h10M9 4l4 4-4 4';
+---
+
+<Base
+  title="Excelsior Systems: custom PCs, built to your budget"
+  description="Custom gaming and workstation PCs from S$698, built and stress tested in Ang Mo Kio. 5.0 from 1,682 Carousell reviews."
+  theme="#f3f4f7"
+>
+  <header class="top">
+    <a class="logo" href="#main" aria-label="Excelsior Systems, back to top">Excelsior</a>
+    <dl class="top__facts">
+      <div><dt>Built in</dt><dd>{shop.area}</dd></div>
+      <div><dt>On Carousell</dt><dd>{shop.rating} from {shop.reviews} reviews</dd></div>
+    </dl>
+    <nav aria-label="Sections">
+      <a href="#ranges">Ranges</a>
+      <a href="#builds">Builds</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="pill" href={ask} target="_blank" rel="noopener">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d={Arrow}></path></svg>
+      Message us
+    </a>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero__scene" data-ring aria-hidden="true">
+        <div class="hero__ring">
+          {
+            ring.map((id, i) => (
+              <div class="hero__card" style={`--at:${i * (360 / ring.length)}deg`}>
+                <Image src={photo(id)} alt="" widths={[300, 600]} sizes="(min-width: 760px) 18vw, 44vw" loading="eager" />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="hero__figure">
+        <Image src={cutout('b14')} alt="A black glass custom PC with rainbow-lit fans, built by Excelsior Systems" widths={[480, 800, 1059]} sizes="(min-width: 760px) 36vw, 84vw" loading="eager" fetchpriority="high" />
+      </div>
+
+      <div class="hero__copy">
+        <h1>Built to <em>your budget.</em></h1>
+        <a class="pill pill--ink" href={ask} target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d={Arrow}></path></svg>
+          Message us on WhatsApp
+        </a>
+      </div>
+
+      <div class="hero__note">
+        <p>
+          Custom gaming and workstation PCs, assembled and stress tested in our Ang Mo Kio shop. Tell us what you can
+          spend and we will spec the rest. From {price(698)}.
+        </p>
+        <p class="hero__sign">Excelsior Systems</p>
+      </div>
+    </section>
+
+    <div class="tape" aria-label="What comes with every build">
+      <ul>
+        {promises.map((p) => <li>{p}</li>)}
+      </ul>
+      <ul aria-hidden="true">
+        {promises.map((p) => <li>{p}</li>)}
+      </ul>
+    </div>
+
+    <section class="ranges" id="ranges">
+      {
+        ranges.map((r) => (
+          <a class="range" href="#builds">
+            <Image src={photo(r.image)} alt="" widths={[480, 800]} sizes="(min-width: 760px) 30vw, 92vw" />
+            <span class="range__body">
+              <span class="range__name">{r.name}</span>
+              <span class="range__line">{r.line}</span>
+              <span class="range__go">
+                See {r.name.toLowerCase()} builds
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d={Arrow}></path></svg>
+              </span>
+            </span>
+          </a>
+        ))
+      }
+    </section>
+
+    <section class="stand">
+      <div class="stand__copy">
+        <h2>We don’t upsell.</h2>
+        <blockquote>
+          “{reviewList[0].text}”
+          <cite>{reviewList[0].user}, on Carousell</cite>
+        </blockquote>
+        <a class="block-btn" href={ask} target="_blank" rel="noopener">Ask us what you need</a>
+      </div>
+      <Image class="stand__img" src={cutout('b03')} alt="A white custom PC with an XFX graphics card" widths={[400, 583]} sizes="(min-width: 760px) 34vw, 70vw" />
+    </section>
+
+    <section class="feed">
+      <h2><a href={shop.instagram} target="_blank" rel="noopener">@excelsior<em>.systems</em></a></h2>
+      <ul class="feed__strip" tabindex="0" aria-label="Recent builds">
+        {
+          strip.map((id) => (
+            <li>
+              <Image src={photo(id)} alt="A finished Excelsior Systems build" widths={[400, 700]} sizes="(min-width: 760px) 22vw, 64vw" />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="shop">
+      <p class="shop__word" aria-hidden="true">Excelsior</p>
+      <Image class="shop__img shop__img--a" src={photo('b08')} alt="A white PC with a wood-trimmed case" widths={[400, 680]} sizes="(min-width: 760px) 28vw, 60vw" data-drift="0.06" />
+      <Image class="shop__img shop__img--b" src={photo('b12')} alt="An amber-lit PC in a dark glass case" widths={[480, 864]} sizes="(min-width: 760px) 34vw, 78vw" data-drift="-0.05" />
+      <div class="shop__copy">
+        <h2>A small shop that has been building since {shop.since}.</h2>
+        <p>
+          Every PC uses brand-new parts from local distributors. We assemble it here, stress test it here, and hand it
+          over with a local warranty. Often on the same day you order.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid" id="builds">
+      <h2>This month’s builds</h2>
+      <ul class="grid__list">
+        {
+          featured.map((b) => (
+            <li class="item">
+              <a href={askAbout(b)} target="_blank" rel="noopener">
+                <span class="item__tile">
+                  <Image src={cutout(b.image)} alt="" widths={[320, 560]} sizes="(min-width: 760px) 20vw, 44vw" />
+                  <span class="item__peek">
+                    {b.specs.map((s) => <span>{s}</span>)}
+                    <b>Ask about this build</b>
+                  </span>
+                </span>
+                <span class="item__name">{b.cpu}</span>
+                <span class="item__sub">{b.gpu}</span>
+                <span class="item__price">{price(b.price)}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="looks">
+      <div class="looks__head">
+        <h2>Shop by budget</h2>
+        <p>Listed prices as of 1 October 2026. Any build can be changed to suit you.</p>
+      </div>
+      <ul class="looks__list">
+        {
+          byBudget.map((b) => (
+            <li>
+              <a class="look" href={askAbout(b)} target="_blank" rel="noopener">
+                <Image src={photo(b.image)} alt="" widths={[480, 800]} sizes="(min-width: 760px) 30vw, 92vw" />
+                <span class="look__cap">
+                  <span>{buildName(b)}</span>
+                  <span>
+                    {b.was && <s>{price(b.was)}</s>}
+                    {price(b.price)}
+                  </span>
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="said" id="reviews">
+      <h2>{shop.rating} from {shop.reviews} <em>reviews.</em></h2>
+      <div class="said__list">
+        {
+          quotes.map((q) => (
+            <figure>
+              <blockquote>“{q.text}”</blockquote>
+              <figcaption>{q.user}, {q.when}</figcaption>
+            </figure>
+          ))
+        }
+      </div>
+      <a class="text-link" href={shop.carousell} target="_blank" rel="noopener">Read them all on Carousell</a>
+    </section>
+
+    <section class="promise" id="visit">
+      <h2>You can only do <em>better.</em></h2>
+      <p>
+        Message us a budget and you will get a parts list and a price, with nothing added that you do not need. Or walk
+        in: {shop.address.join(', ')}.
+      </p>
+      <a class="pill" href={ask} target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d={Arrow}></path></svg>
+        Message us on WhatsApp
+      </a>
+    </section>
+  </main>
+
+  <footer class="end">
+    <p class="logo">Excelsior</p>
+    <div class="end__cols">
+      <div>
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="#ranges">Gaming</a></li>
+          <li><a href="#ranges">Workstation</a></li>
+          <li><a href="#ranges">Home office</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <address>{shop.address.map((l) => <span>{l}</span>)}</address>
+      </div>
+      <div>
+        <h3>Talk</h3>
+        <ul>
+          <li><a href={ask} target="_blank" rel="noopener">WhatsApp {shop.phone}</a></li>
+          <li><a href={shop.carousell} target="_blank" rel="noopener">Carousell</a></li>
+          <li><a href={shop.instagram} target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="end__note">
+      Concept site. Photos, prices, specs and reviews are from Excelsior Systems’ Carousell page on 1 October 2026.
+      <a href={import.meta.env.BASE_URL}>See the other concept</a>
+    </p>
+  </footer>
+</Base>
+
+<script>
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Hero ring: photos sit on the inside of a cylinder that drifts, and can be dragged.
+  const scene = document.querySelector<HTMLElement>('[data-ring]');
+  if (scene) {
+    const ringEl = scene.querySelector<HTMLElement>('.hero__ring')!;
+    const cards = [...scene.querySelectorAll<HTMLElement>('.hero__card')];
+    const step = 360 / cards.length;
+    let angle = -step / 2;
+    let velocity = 0;
+    let dragging = false;
+    let lastX = 0;
+    let last = performance.now();
+
+    const place = () => {
+      ringEl.style.setProperty('--turn', `${angle.toFixed(3)}deg`);
+      cards.forEach((card, i) => {
+        // hide the half of the cylinder that sits behind the viewer
+        const a = (((i * step + angle) % 360) + 540) % 360 - 180;
+        card.style.visibility = Math.abs(a) > 96 ? 'hidden' : 'visible';
+      });
+    };
+
+    place();
+    scene.classList.add('is-ready');
+
+    const tick = (now: number) => {
+      const dt = Math.min(0.05, (now - last) / 1000);
+      last = now;
+      if (!dragging) {
+        angle += velocity * dt;
+        velocity += ((reduced ? 0 : -2.2) - velocity) * Math.min(1, dt * 2.2);
+      }
+      place();
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+
+    const hero = scene.closest<HTMLElement>('.hero')!;
+    hero.addEventListener('pointerdown', (e) => {
+      if ((e.target as HTMLElement).closest('a')) return;
+      dragging = true;
+      lastX = e.clientX;
+    });
+    window.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      const dx = e.clientX - lastX;
+      lastX = e.clientX;
+      const delta = (dx / window.innerWidth) * 70;
+      angle += delta;
+      velocity = delta * 60;
+    });
+    window.addEventListener('pointerup', () => (dragging = false));
+    window.addEventListener('pointercancel', () => (dragging = false));
+  }
+
+  // The two shop photos drift at different rates as the section scrolls past.
+  const drifters = [...document.querySelectorAll<HTMLElement>('[data-drift]')];
+  if (drifters.length && !reduced) {
+    let queued = false;
+    const update = () => {
+      queued = false;
+      const mid = window.innerHeight / 2;
+      for (const el of drifters) {
+        const rect = el.parentElement!.getBoundingClientRect();
+        const offset = rect.top + rect.height / 2 - mid;
+        el.style.setProperty('--drift', `${(offset * Number(el.dataset.drift)).toFixed(1)}px`);
+      }
+    };
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!queued) {
+          queued = true;
+          requestAnimationFrame(update);
+        }
+      },
+      { passive: true },
+    );
+    update();
+  }
+
+  const top = document.querySelector('.top');
+  const onScroll = () => top?.classList.toggle('is-scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
