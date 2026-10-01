@@ -36,13 +36,14 @@ export function createPC(): PC {
   const plastic = new THREE.MeshStandardMaterial({ color: 0x1d2027, metalness: 0.25, roughness: 0.5 });
   const pcb = new THREE.MeshStandardMaterial({ color: 0x15181f, metalness: 0.35, roughness: 0.55 });
   const slot = new THREE.MeshStandardMaterial({ color: 0x3a3e48, metalness: 0.55, roughness: 0.42 });
+  // Dark base colour: a white pane picks up enough diffuse light to read as a grey sheet.
   const glass = new THREE.MeshPhysicalMaterial({
-    color: 0xffffff,
+    color: 0x0b0d12,
     metalness: 0,
-    roughness: 0.04,
+    roughness: 0.05,
     transparent: true,
-    opacity: 0.045,
-    envMapIntensity: 0.35,
+    opacity: 0.1,
+    envMapIntensity: 0.3,
     side: THREE.DoubleSide,
     depthWrite: false,
   });
@@ -337,7 +338,7 @@ export function createPC(): PC {
   grille.rotation.y = Math.PI;
   psu.add(grille);
   psu.position.set(-1.3, -1.7, (zMid + zBack) / 2);
-  addPart('psu', 'Power supply', psu, [0, 0, -2.2], 0.34, [0, 0, 0], [0, -0.43, 0]);
+  addPart('psu', '', psu, [0, 0, -2.2], 0.34, [0, 0, 0], [0, -0.43, 0]);
 
   let current = -1;
   const q0 = new THREE.Quaternion();
@@ -351,7 +352,7 @@ export function createPC(): PC {
       q1.setFromEuler(p.tilt);
       p.group.quaternion.copy(q0).slerp(q1, local);
     }
-    glass.opacity = 0.045 + 0.03 * Math.sin(Math.min(t, 1) * Math.PI);
+    glass.opacity = 0.1 + 0.06 * Math.sin(Math.min(t, 1) * Math.PI);
   };
   setExplode(0);
 

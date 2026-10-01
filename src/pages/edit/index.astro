@@ -15,9 +15,9 @@ const ring = ['b02', 'b15', 'b05', 'b12', 'b07', 'b11', 'b04', 'b16', 'b08', 'b1
 const strip = ['b10', 'b02', 'b12', 'b05', 'b16', 'b04', 'b11', 'b15'];
 
 const ranges = [
-  { name: 'Gaming', line: 'Specced for the games you actually play.', image: 'b15' },
-  { name: 'Workstation', line: 'For editing, rendering and long days.', image: 'b11' },
-  { name: 'Home office', line: 'A quiet desk set, monitor included.', image: 'b13' },
+  { name: 'Gaming', line: 'Specced for the games you actually play.', image: 'b15', ask: 'a gaming PC' },
+  { name: 'Workstation', line: 'For editing, rendering and long days.', image: 'b11', ask: 'a workstation PC' },
+  { name: 'Home office', line: 'A quiet desk set, monitor included.', image: 'b13', ask: 'a home office PC' },
 ];
 
 const featured = ['9800x3d-rtx5080', '7700x-rx9070xt', '7800x3d-rx9070xt', '7700-rtx5060'].map(byId);
@@ -38,10 +38,10 @@ const Arrow = 'M3 8h10M9 4l4 4-4 4';
       <div><dt>On Carousell</dt><dd>{shop.rating} from {shop.reviews} reviews</dd></div>
     </dl>
     <nav aria-label="Sections">
-      <a href="#ranges">Ranges</a>
+      <a class="nav-wide" href="#ranges">Ranges</a>
       <a href="#builds">Builds</a>
       <a href="#reviews">Reviews</a>
-      <a href="#visit">Visit</a>
+      <a class="nav-wide" href="#visit">Visit</a>
     </nav>
     <a class="pill" href={ask} target="_blank" rel="noopener">
       <svg viewBox="0 0 16 16" aria-hidden="true"><path d={Arrow}></path></svg>
@@ -96,13 +96,13 @@ const Arrow = 'M3 8h10M9 4l4 4-4 4';
     <section class="ranges" id="ranges">
       {
         ranges.map((r) => (
-          <a class="range" href="#builds">
+          <a class="range" href={whatsappLink(`Hi Excelsior, I'm looking for ${r.ask}. My budget is S$`)} target="_blank" rel="noopener">
             <Image src={photo(r.image)} alt="" widths={[480, 800]} sizes="(min-width: 760px) 30vw, 92vw" />
             <span class="range__body">
-              <span class="range__name">{r.name}</span>
+              <h2 class="range__name">{r.name}</h2>
               <span class="range__line">{r.line}</span>
               <span class="range__go">
-                See {r.name.toLowerCase()} builds
+                Ask about {r.name.toLowerCase()} builds
                 <svg viewBox="0 0 16 16" aria-hidden="true"><path d={Arrow}></path></svg>
               </span>
             </span>
@@ -124,7 +124,10 @@ const Arrow = 'M3 8h10M9 4l4 4-4 4';
     </section>
 
     <section class="feed">
-      <h2><a href={shop.instagram} target="_blank" rel="noopener">@excelsior<em>.systems</em></a></h2>
+      <div class="feed__head">
+        <h2>Recent <em>builds</em></h2>
+        <a class="text-link" href={shop.instagram} target="_blank" rel="noopener">More on Instagram</a>
+      </div>
       <ul class="feed__strip" tabindex="0" aria-label="Recent builds">
         {
           strip.map((id) => (
@@ -232,9 +235,9 @@ const Arrow = 'M3 8h10M9 4l4 4-4 4';
       <div>
         <h3>Shop</h3>
         <ul>
-          <li><a href="#ranges">Gaming</a></li>
-          <li><a href="#ranges">Workstation</a></li>
-          <li><a href="#ranges">Home office</a></li>
+          <li><a href="#ranges">Ranges</a></li>
+          <li><a href="#builds">This month’s builds</a></li>
+          <li><a href="#reviews">Reviews</a></li>
         </ul>
       </div>
       <div>

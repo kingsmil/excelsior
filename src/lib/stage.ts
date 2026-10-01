@@ -24,7 +24,7 @@ const GLOWS = [
 const MINOR = new Set(['board', 'cpu', 'ram']);
 // Callouts sit in a band above or below the build, on two tiers so neighbours never collide.
 const CALLOUT: Record<string, [side: 1 | -1, tier: 0 | 1]> = {
-  glass: [-1, 0],
+  glass: [-1, 1],
   fans: [1, 1],
   cooler: [-1, 0],
   board: [-1, 1],
@@ -79,9 +79,27 @@ export function mountStage(section: HTMLElement): boolean {
   under.position.set(0, -2.0, 2.2);
   pc.root.add(under);
 
+  // The floor is a pool under the PC that fades out, so the stage stays black to the edges.
+  const fade = document.createElement('canvas');
+  fade.width = fade.height = 256;
+  const ctx = fade.getContext('2d')!;
+  const grad = ctx.createRadialGradient(128, 128, 0, 128, 128, 128);
+  grad.addColorStop(0, '#fff');
+  grad.addColorStop(0.45, '#888');
+  grad.addColorStop(1, '#000');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, 256, 256);
   const floor = new THREE.Mesh(
-    new THREE.CircleGeometry(70, 64),
-    new THREE.MeshStandardMaterial({ color: 0x050608, metalness: 0, roughness: 1, envMapIntensity: 0 }),
+    new THREE.CircleGeometry(11, 64),
+    new THREE.MeshStandardMaterial({
+      color: 0x0c0e13,
+      metalness: 0,
+      roughness: 1,
+      envMapIntensity: 0,
+      alphaMap: new THREE.CanvasTexture(fade),
+      transparent: true,
+      depthWrite: false,
+    }),
   );
   floor.rotation.x = -Math.PI / 2;
   floor.position.y = -2.62;
@@ -111,6 +129,10 @@ export function mountStage(section: HTMLElement): boolean {
     return el;
   });
 
+  // half of each callout's text width plus a gutter, so text never leaves the stage
+  const halves = labelEls.map(() => 70);
+  const measure = () => labelEls.forEach((el, n) => (halves[n] = (el.querySelector('b')?.offsetWidth ?? 110) / 2 + 14));
+
   let width = 0;
   let height = 0;
   let narrow = false;
@@ -127,9 +149,10 @@ export function mountStage(section: HTMLElement): boolean {
     camera.aspect = width / height;
     camera.fov = narrow ? 40 : 28;
     // Keep the PC right of the copy on wide screens, above it on phones.
-    if (narrow) camera.setViewOffset(width, height, 0, Math.round(height * 0.23), width, height);
+    if (narrow) camera.setViewOffset(width, height, 0, Math.round(height * 0.27), width, height);
     else camera.setViewOffset(width, height, Math.round(-width * 0.19), 0, width, height);
     camera.updateProjectionMatrix();
+    measure();
   };
   new ResizeObserver(resize).observe(canvas.parentElement!);
   resize();
@@ -181,6 +204,8 @@ export function mountStage(section: HTMLElement): boolean {
       ? lerp(lerp(22, 37, explode), 21, close)
       : lerp(lerp(17.5, 24, explode), 16.5, close);
     target.z = lerp(0, 1, explode);
+    // on a phone the open build drops a little so the top callouts clear it
+    target.y = -0.15 + (narrow ? explode * 0.9 : 0);
     camera.position.set(
       target.x + radius * Math.sin(yaw) * Math.cos(pitch),
       target.y + radius * Math.sin(pitch),
@@ -204,7 +229,6 @@ export function mountStage(section: HTMLElement): boolean {
     labelHost.classList.toggle('is-open', explode > 0.82);
     if (explode > 0.5) {
       const bandTop = height * (narrow ? 0.16 : 0.15);
-      const edge = narrow ? 62 : 80;
       const bandBottom = height * (narrow ? 0.5 : 0.86);
       labelled.forEach((part, n) => {
         const [side, tier] = CALLOUT[part.id] ?? [1, 0];
@@ -218,7 +242,7 @@ export function mountStage(section: HTMLElement): boolean {
         el.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0)`;
         el.style.setProperty('--run', `${(band - y).toFixed(1)}px`);
         // keep the text on screen when its part sits near an edge
-        el.style.setProperty('--shift', `${(Math.min(width - edge, Math.max(edge, x)) - x).toFixed(1)}px`);
+        el.style.setProperty('--shift', `${(Math.min(width - halves[n], Math.max(halves[n], x)) - x).toFixed(1)}px`);
       });
     }
 

@@ -325,7 +325,7 @@ h2 {
   bottom: 15vh;
   left: var(--gutter);
   display: block;
-  width: min(33rem, 39vw);
+  width: min(30rem, 34vw);
   max-width: none;
 }
 
@@ -545,6 +545,12 @@ h2 {
   max-height: 5.5rem;
   object-fit: contain;
   transition: transform 0.5s var(--ease);
+}
+
+.row__img--photo img {
+  width: 5.5rem;
+  height: 5.5rem;
+  object-fit: cover;
 }
 
 .row:hover .row__img img {
@@ -800,12 +806,23 @@ h2 {
     font-size: 1rem;
   }
 
+  /* over the pinned stage the bar stays to one line; once it turns solid the links return */
   .bar nav {
     display: none;
   }
 
   .bar {
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 0.5rem 1rem;
+  }
+
+  .bar.is-solid nav {
+    display: flex;
+    gap: 1.5rem;
+    order: 3;
+    width: 100%;
+    margin: 0;
   }
 
   .mark span {

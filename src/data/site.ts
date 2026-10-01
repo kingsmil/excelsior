@@ -5,7 +5,8 @@
 export const shop = {
   name: 'Excelsior Systems',
   area: 'Ang Mo Kio, Singapore',
-  address: ['3 Ang Mo Kio Street 62, #03-07', 'Singapore 569139'],
+  // U+2011 keeps the unit number on one line
+  address: ['3 Ang Mo Kio Street 62, #03\u201107', 'Singapore 569139'],
   phone: '+65 8555 0225',
   whatsapp: '6585550225',
   since: 2019,
