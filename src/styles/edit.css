@@ -362,7 +362,7 @@ svg {
 
 .hero__copy {
   position: absolute;
-  bottom: 9%;
+  bottom: 5.5%;
   left: var(--gutter);
   z-index: 3;
 }
@@ -615,7 +615,8 @@ svg {
 }
 
 .shop__word {
-  grid-column: 3 / -1;
+  grid-column: 5 / -1;
+  margin-left: -2.75rem;
   grid-row: 1;
   align-self: start;
   margin-top: 2rem;
@@ -649,9 +650,9 @@ svg {
   z-index: 1;
   grid-column: 7 / -1;
   grid-row: 1 / span 2;
-  align-self: end;
+  align-self: start;
   width: 100%;
-  margin-top: 4.75rem;
+  margin-top: 5.25rem;
   aspect-ratio: 5 / 4;
   object-fit: cover;
 }
@@ -909,6 +910,11 @@ svg {
   border-color: transparent;
 }
 
+/* cobalt is too dark to see as a focus ring on the ink band */
+.promise :focus-visible {
+  outline-color: var(--paper);
+}
+
 .promise .pill:hover {
   border-color: var(--accent);
   background: var(--accent);
@@ -1126,6 +1132,7 @@ svg {
 
   .shop__word {
     margin-top: 0;
+    margin-left: 0;
     font-size: clamp(2rem, 11vw, 3.25rem);
     letter-spacing: 0.16em;
   }

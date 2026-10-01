@@ -1,0 +1,713 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-01T00:00:00+08:00",
+  "title": "Design System: Excelsior Systems",
+  "extensions": {
+    "colorMeta": {
+      "edit-paper": {
+        "role": "neutral",
+        "displayName": "Porcelain",
+        "world": "storefront",
+        "canonical": "oklch(96.7% 0.004 271)",
+        "tonalRamp": [
+          "oklch(15% 0.004 271)",
+          "oklch(27% 0.004 271)",
+          "oklch(39% 0.004 271)",
+          "oklch(51% 0.004 271)",
+          "oklch(63% 0.004 271)",
+          "oklch(75% 0.004 271)",
+          "oklch(85% 0.004 271)",
+          "oklch(95% 0.004 271)"
+        ]
+      },
+      "edit-paper-2": {
+        "role": "neutral",
+        "displayName": "Porcelain Shade",
+        "world": "storefront",
+        "canonical": "oklch(93.1% 0.010 273)",
+        "tonalRamp": [
+          "oklch(15% 0.010 273)",
+          "oklch(27% 0.010 273)",
+          "oklch(39% 0.010 273)",
+          "oklch(51% 0.010 273)",
+          "oklch(63% 0.010 273)",
+          "oklch(75% 0.010 273)",
+          "oklch(85% 0.010 273)",
+          "oklch(95% 0.010 273)"
+        ]
+      },
+      "edit-tile": {
+        "role": "neutral",
+        "displayName": "Tile White",
+        "world": "storefront",
+        "canonical": "oklch(98.9% 0.003 286)",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(27% 0.003 286)",
+          "oklch(39% 0.003 286)",
+          "oklch(51% 0.003 286)",
+          "oklch(63% 0.003 286)",
+          "oklch(75% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "edit-ink": {
+        "role": "neutral",
+        "displayName": "Ink Navy",
+        "world": "storefront",
+        "canonical": "oklch(19.6% 0.012 271)",
+        "tonalRamp": [
+          "oklch(15% 0.012 271)",
+          "oklch(27% 0.012 271)",
+          "oklch(39% 0.012 271)",
+          "oklch(51% 0.012 271)",
+          "oklch(63% 0.012 271)",
+          "oklch(75% 0.012 271)",
+          "oklch(85% 0.012 271)",
+          "oklch(95% 0.012 271)"
+        ]
+      },
+      "edit-soft": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "world": "storefront",
+        "canonical": "oklch(47.5% 0.027 267)",
+        "tonalRamp": [
+          "oklch(15% 0.027 267)",
+          "oklch(27% 0.027 267)",
+          "oklch(39% 0.027 267)",
+          "oklch(51% 0.027 267)",
+          "oklch(63% 0.027 267)",
+          "oklch(75% 0.027 267)",
+          "oklch(85% 0.027 267)",
+          "oklch(95% 0.027 267)"
+        ]
+      },
+      "edit-haze": {
+        "role": "neutral",
+        "displayName": "Haze",
+        "world": "storefront",
+        "canonical": "oklch(56.0% 0.039 269)",
+        "tonalRamp": [
+          "oklch(15% 0.039 269)",
+          "oklch(27% 0.039 269)",
+          "oklch(39% 0.039 269)",
+          "oklch(51% 0.039 269)",
+          "oklch(63% 0.039 269)",
+          "oklch(75% 0.039 269)",
+          "oklch(85% 0.039 269)",
+          "oklch(95% 0.039 269)"
+        ]
+      },
+      "edit-line": {
+        "role": "neutral",
+        "displayName": "Hairline (Storefront)",
+        "world": "storefront",
+        "canonical": "oklch(87.6% 0.013 271)",
+        "tonalRamp": [
+          "oklch(15% 0.013 271)",
+          "oklch(27% 0.013 271)",
+          "oklch(39% 0.013 271)",
+          "oklch(51% 0.013 271)",
+          "oklch(63% 0.013 271)",
+          "oklch(75% 0.013 271)",
+          "oklch(85% 0.013 271)",
+          "oklch(95% 0.013 271)"
+        ]
+      },
+      "edit-accent": {
+        "role": "primary",
+        "displayName": "Cobalt",
+        "world": "storefront",
+        "canonical": "oklch(47.3% 0.223 267)",
+        "tonalRamp": [
+          "oklch(15% 0.223 267)",
+          "oklch(27% 0.223 267)",
+          "oklch(39% 0.223 267)",
+          "oklch(51% 0.223 267)",
+          "oklch(63% 0.223 267)",
+          "oklch(75% 0.223 267)",
+          "oklch(85% 0.223 267)",
+          "oklch(95% 0.223 267)"
+        ]
+      },
+      "edit-on-ink-soft": {
+        "role": "neutral",
+        "displayName": "Mist on Ink",
+        "world": "storefront",
+        "canonical": "oklch(85.1% 0.019 269)",
+        "tonalRamp": [
+          "oklch(15% 0.019 269)",
+          "oklch(27% 0.019 269)",
+          "oklch(39% 0.019 269)",
+          "oklch(51% 0.019 269)",
+          "oklch(63% 0.019 269)",
+          "oklch(75% 0.019 269)",
+          "oklch(85% 0.019 269)",
+          "oklch(95% 0.019 269)"
+        ]
+      },
+      "edit-haze-on-ink": {
+        "role": "neutral",
+        "displayName": "Haze on Ink",
+        "world": "storefront",
+        "canonical": "oklch(76.1% 0.031 269)",
+        "tonalRamp": [
+          "oklch(15% 0.031 269)",
+          "oklch(27% 0.031 269)",
+          "oklch(39% 0.031 269)",
+          "oklch(51% 0.031 269)",
+          "oklch(63% 0.031 269)",
+          "oklch(75% 0.031 269)",
+          "oklch(85% 0.031 269)",
+          "oklch(95% 0.031 269)"
+        ]
+      },
+      "teardown-stage": {
+        "role": "neutral",
+        "displayName": "Stage Black",
+        "world": "teardown",
+        "canonical": "oklch(13.5% 0.007 269)",
+        "tonalRamp": [
+          "oklch(15% 0.007 269)",
+          "oklch(27% 0.007 269)",
+          "oklch(39% 0.007 269)",
+          "oklch(51% 0.007 269)",
+          "oklch(63% 0.007 269)",
+          "oklch(75% 0.007 269)",
+          "oklch(85% 0.007 269)",
+          "oklch(95% 0.007 269)"
+        ]
+      },
+      "teardown-raise": {
+        "role": "neutral",
+        "displayName": "Raise",
+        "world": "teardown",
+        "canonical": "oklch(17.8% 0.011 268)",
+        "tonalRamp": [
+          "oklch(15% 0.011 268)",
+          "oklch(27% 0.011 268)",
+          "oklch(39% 0.011 268)",
+          "oklch(51% 0.011 268)",
+          "oklch(63% 0.011 268)",
+          "oklch(75% 0.011 268)",
+          "oklch(85% 0.011 268)",
+          "oklch(95% 0.011 268)"
+        ]
+      },
+      "teardown-ink": {
+        "role": "neutral",
+        "displayName": "Studio White",
+        "world": "teardown",
+        "canonical": "oklch(95.7% 0.007 261)",
+        "tonalRamp": [
+          "oklch(15% 0.007 261)",
+          "oklch(27% 0.007 261)",
+          "oklch(39% 0.007 261)",
+          "oklch(51% 0.007 261)",
+          "oklch(63% 0.007 261)",
+          "oklch(75% 0.007 261)",
+          "oklch(85% 0.007 261)",
+          "oklch(95% 0.007 261)"
+        ]
+      },
+      "teardown-muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "world": "teardown",
+        "canonical": "oklch(73.7% 0.022 264)",
+        "tonalRamp": [
+          "oklch(15% 0.022 264)",
+          "oklch(27% 0.022 264)",
+          "oklch(39% 0.022 264)",
+          "oklch(51% 0.022 264)",
+          "oklch(63% 0.022 264)",
+          "oklch(75% 0.022 264)",
+          "oklch(85% 0.022 264)",
+          "oklch(95% 0.022 264)"
+        ]
+      },
+      "teardown-line": {
+        "role": "neutral",
+        "displayName": "Hairline (Teardown)",
+        "world": "teardown",
+        "canonical": "oklch(28.5% 0.018 266)",
+        "tonalRamp": [
+          "oklch(15% 0.018 266)",
+          "oklch(27% 0.018 266)",
+          "oklch(39% 0.018 266)",
+          "oklch(51% 0.018 266)",
+          "oklch(63% 0.018 266)",
+          "oklch(75% 0.018 266)",
+          "oklch(85% 0.018 266)",
+          "oklch(95% 0.018 266)"
+        ]
+      },
+      "teardown-glow": {
+        "role": "primary",
+        "displayName": "Rig Blue",
+        "world": "teardown",
+        "canonical": "oklch(73.5% 0.154 240)",
+        "tonalRamp": [
+          "oklch(15% 0.154 240)",
+          "oklch(27% 0.154 240)",
+          "oklch(39% 0.154 240)",
+          "oklch(51% 0.154 240)",
+          "oklch(63% 0.154 240)",
+          "oklch(75% 0.154 240)",
+          "oklch(85% 0.154 240)",
+          "oklch(95% 0.154 240)"
+        ]
+      },
+      "teardown-glow-violet": {
+        "role": "secondary",
+        "displayName": "Rig Violet",
+        "world": "teardown",
+        "canonical": "oklch(61.5% 0.231 293)",
+        "tonalRamp": [
+          "oklch(15% 0.231 293)",
+          "oklch(27% 0.231 293)",
+          "oklch(39% 0.231 293)",
+          "oklch(51% 0.231 293)",
+          "oklch(63% 0.231 293)",
+          "oklch(75% 0.231 293)",
+          "oklch(85% 0.231 293)",
+          "oklch(95% 0.231 293)"
+        ]
+      },
+      "teardown-glow-amber": {
+        "role": "secondary",
+        "displayName": "Rig Amber",
+        "world": "teardown",
+        "canonical": "oklch(76.1% 0.170 58)",
+        "tonalRamp": [
+          "oklch(15% 0.170 58)",
+          "oklch(27% 0.170 58)",
+          "oklch(39% 0.170 58)",
+          "oklch(51% 0.170 58)",
+          "oklch(63% 0.170 58)",
+          "oklch(75% 0.170 58)",
+          "oklch(85% 0.170 58)",
+          "oklch(95% 0.170 58)"
+        ]
+      },
+      "teardown-on-light": {
+        "role": "neutral",
+        "displayName": "Dark on Light",
+        "world": "teardown",
+        "canonical": "oklch(12.3% 0.011 271)",
+        "tonalRamp": [
+          "oklch(15% 0.011 271)",
+          "oklch(27% 0.011 271)",
+          "oklch(39% 0.011 271)",
+          "oklch(51% 0.011 271)",
+          "oklch(63% 0.011 271)",
+          "oklch(75% 0.011 271)",
+          "oklch(85% 0.011 271)",
+          "oklch(95% 0.011 271)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "edit-display": {
+        "displayName": "Display (Storefront)",
+        "purpose": "Hero headline in Bodoni Moda; closing phrase may turn italic in Haze."
+      },
+      "edit-headline": {
+        "displayName": "Headline (Storefront)",
+        "purpose": "Section headings that open a grid of items or quotes."
+      },
+      "edit-title": {
+        "displayName": "Title (Storefront)",
+        "purpose": "Headings beside other content: strip, shop paragraph, range names."
+      },
+      "edit-statement": {
+        "displayName": "Statement (Storefront)",
+        "purpose": "Heavy uppercase sans, used once for the no-upsell claim."
+      },
+      "edit-quote": {
+        "displayName": "Quote (Storefront)",
+        "purpose": "Buyer quotes in the reviews row."
+      },
+      "edit-body": {
+        "displayName": "Body (Storefront)",
+        "purpose": "Paragraphs, capped between 27rem and 34rem."
+      },
+      "edit-body-sm": {
+        "displayName": "Body small (Storefront)",
+        "purpose": "Captions, sub-lines, prices, footer links."
+      },
+      "edit-control": {
+        "displayName": "Control (Storefront)",
+        "purpose": "Pill and text-link text."
+      },
+      "edit-label": {
+        "displayName": "Label (Storefront)",
+        "purpose": "Tracked uppercase for the block button, marquee, fact names, footer columns."
+      },
+      "edit-wordmark": {
+        "displayName": "Wordmark (Storefront)",
+        "purpose": "\"Excelsior\" in header and footer."
+      },
+      "teardown-display": {
+        "displayName": "Display (Teardown)",
+        "purpose": "Stage chapter headings: 125% width, 800, uppercase."
+      },
+      "teardown-headline": {
+        "displayName": "Headline (Teardown)",
+        "purpose": "Section headings below the stage."
+      },
+      "teardown-price": {
+        "displayName": "Price (Teardown)",
+        "purpose": "Price in a build row, tabular numerals."
+      },
+      "teardown-title": {
+        "displayName": "Title (Teardown)",
+        "purpose": "Step titles and build names at 112% width, sentence case."
+      },
+      "teardown-quote": {
+        "displayName": "Quote (Teardown)",
+        "purpose": "Buyer quotes."
+      },
+      "teardown-body": {
+        "displayName": "Body (Teardown)",
+        "purpose": "Paragraphs in Muted, capped between 24rem and 34rem."
+      },
+      "teardown-label": {
+        "displayName": "Label (Teardown)",
+        "purpose": "Buttons; nav and text links use the size at normal width."
+      },
+      "teardown-callout": {
+        "displayName": "Callout (Teardown)",
+        "purpose": "Part names in the open scene."
+      },
+      "teardown-wordmark": {
+        "displayName": "Wordmark (Teardown)",
+        "purpose": "\"Excelsior Systems\" in header and footer."
+      }
+    },
+    "shadows": [
+      {
+        "name": "edit-cutout-hero",
+        "value": "drop-shadow(0 34px 34px rgb(19 21 27 / 0.3))",
+        "purpose": "Storefront. CSS filter under the hero cut-out PC."
+      },
+      {
+        "name": "edit-cutout-feature",
+        "value": "drop-shadow(0 30px 30px rgb(19 21 27 / 0.24))",
+        "purpose": "Storefront. CSS filter under the cut-out beside the statement."
+      },
+      {
+        "name": "edit-cutout-tile",
+        "value": "drop-shadow(0 18px 18px rgb(19 21 27 / 0.2))",
+        "purpose": "Storefront. CSS filter under cut-outs on product tiles."
+      },
+      {
+        "name": "edit-photo",
+        "value": "0 34px 50px -24px rgb(19 21 27 / 0.45)",
+        "purpose": "Storefront. Box shadow under the two overlapping collage photographs."
+      },
+      {
+        "name": "edit-pill",
+        "value": "0 10px 24px -14px rgb(19 21 27 / 0.35)",
+        "purpose": "Storefront. The only shadow on a control."
+      },
+      {
+        "name": "edit-caption-scrim",
+        "value": "linear-gradient(to top, rgb(9 10 14 / 0.86), rgb(9 10 14 / 0))",
+        "purpose": "Storefront. Gradient under white caption text on budget-build photos."
+      },
+      {
+        "name": "teardown-callout-halo",
+        "value": "0 0 10px #07080b",
+        "purpose": "Teardown. text-shadow keeping callout names legible over the model. The Teardown has no box shadows."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Shared. Every transition in both worlds."
+      },
+      {
+        "name": "edit-state",
+        "value": "0.3s to 0.45s",
+        "purpose": "Storefront. Colour, background and arrow-nudge transitions on controls and links."
+      },
+      {
+        "name": "edit-reveal",
+        "value": "0.55s panel, 0.7s cut-out",
+        "purpose": "Storefront. Product tile reveal panel slide and cut-out lift."
+      },
+      {
+        "name": "edit-photo-hover",
+        "value": "0.9s to 1s",
+        "purpose": "Storefront. Slow scale and saturation on range and budget photographs."
+      },
+      {
+        "name": "edit-header",
+        "value": "0.4s",
+        "purpose": "Storefront. Header ground and hairline after 24px of scroll."
+      },
+      {
+        "name": "edit-tape",
+        "value": "52s linear infinite",
+        "purpose": "Storefront. Promise marquee loop; static under reduced motion."
+      },
+      {
+        "name": "edit-ring-drift",
+        "value": "-2.2deg/s; drag 70deg per viewport width",
+        "purpose": "Storefront. Hero photo ring drift and drag with momentum; drift stops under reduced motion."
+      },
+      {
+        "name": "edit-photo-drift",
+        "value": "0.06 and -0.05 of offset from viewport centre",
+        "purpose": "Storefront. Scroll drift on the two collage photographs; off under reduced motion."
+      },
+      {
+        "name": "teardown-state",
+        "value": "0.3s to 0.5s",
+        "purpose": "Teardown. Button, link, row and tick transitions."
+      },
+      {
+        "name": "teardown-chapter",
+        "value": "0.7s, 0.12s delay in; 28px rise, 10px blur",
+        "purpose": "Teardown. Chapter copy exchange in the stage; instant under reduced motion."
+      },
+      {
+        "name": "teardown-ribbon",
+        "value": "46s linear infinite",
+        "purpose": "Teardown. Promise marquee loop; static under reduced motion."
+      },
+      {
+        "name": "teardown-scroll-timeline",
+        "value": "520vh; open 0.10-0.40, close 0.60-0.86; chapters at 0.16, 0.56, 0.84; glow stops 0, 0.36, 0.68, 1",
+        "purpose": "Teardown. Scroll-scrubbed explode, chapter and glow timeline, smoothed by 1 - exp(-7dt)."
+      },
+      {
+        "name": "teardown-part-ease",
+        "value": "cubic ease-in-out, stagger 0 to 0.34",
+        "purpose": "Teardown. Per-part travel while the build opens and closes."
+      },
+      {
+        "name": "teardown-ambient",
+        "value": "fans 5 to 6.5 rad/s; camera sway 0.04 rad",
+        "purpose": "Teardown. The only motion not driven by scroll; off under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone (shared)",
+        "value": "760px"
+      },
+      {
+        "name": "edit-mid",
+        "value": "1000px"
+      },
+      {
+        "name": "edit-touch",
+        "value": "(hover: none)"
+      },
+      {
+        "name": "teardown-mid",
+        "value": "1040px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Storefront: Pill",
+      "kind": "button",
+      "refersTo": "edit-pill",
+      "description": "Storefront. Light pill with a round arrow badge; the standard WhatsApp action in the header and on the ink band.",
+      "html": "<a class=\"ds-edit-pill\" href=\"#\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h10M9 4l4 4-4 4\"/></svg>Message us</a>",
+      "css": ".ds-edit-pill{display:inline-flex;align-items:center;gap:0.75rem;min-height:3rem;padding:0.35rem 1.35rem 0.35rem 0.4rem;border:1px solid #d3d6df;border-radius:999px;background:#fbfbfd;color:#13151b;font-family:'Hanken Grotesk Variable','Hanken Grotesk',sans-serif;font-size:0.875rem;font-weight:500;letter-spacing:0.02em;text-decoration:none;white-space:nowrap;box-shadow:0 10px 24px -14px rgb(19 21 27 / 0.35);transition:background 0.35s cubic-bezier(0.16,1,0.3,1),color 0.35s cubic-bezier(0.16,1,0.3,1),border-color 0.35s cubic-bezier(0.16,1,0.3,1)} .ds-edit-pill svg{width:2.2rem;height:2.2rem;padding:0.6rem;border-radius:50%;background:#13151b;color:#f3f4f7;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.45s cubic-bezier(0.16,1,0.3,1),background 0.35s cubic-bezier(0.16,1,0.3,1),color 0.35s cubic-bezier(0.16,1,0.3,1)} .ds-edit-pill:hover{border-color:#13151b;background:#13151b;color:#f3f4f7} .ds-edit-pill:hover svg{background:#f3f4f7;color:#13151b;transform:translateX(3px)} .ds-edit-pill:active{transform:translateY(1px)} .ds-edit-pill:focus-visible{outline:2px solid #2545d6;outline-offset:4px}"
+    },
+    {
+      "name": "Storefront: Ink Pill",
+      "kind": "button",
+      "refersTo": "edit-pill-ink",
+      "description": "Storefront. Pre-inverted pill for the hero primary action; hover fills Cobalt.",
+      "html": "<a class=\"ds-edit-pill ds-edit-pill--ink\" href=\"#\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h10M9 4l4 4-4 4\"/></svg>Message us on WhatsApp</a>",
+      "css": ".ds-edit-pill{display:inline-flex;align-items:center;gap:0.75rem;min-height:3rem;padding:0.35rem 1.35rem 0.35rem 0.4rem;border:1px solid #d3d6df;border-radius:999px;background:#fbfbfd;color:#13151b;font-family:'Hanken Grotesk Variable','Hanken Grotesk',sans-serif;font-size:0.875rem;font-weight:500;letter-spacing:0.02em;text-decoration:none;white-space:nowrap;box-shadow:0 10px 24px -14px rgb(19 21 27 / 0.35);transition:background 0.35s cubic-bezier(0.16,1,0.3,1),color 0.35s cubic-bezier(0.16,1,0.3,1),border-color 0.35s cubic-bezier(0.16,1,0.3,1)} .ds-edit-pill svg{width:2.2rem;height:2.2rem;padding:0.6rem;border-radius:50%;background:#13151b;color:#f3f4f7;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.45s cubic-bezier(0.16,1,0.3,1),background 0.35s cubic-bezier(0.16,1,0.3,1),color 0.35s cubic-bezier(0.16,1,0.3,1)} .ds-edit-pill:hover{border-color:#13151b;background:#13151b;color:#f3f4f7} .ds-edit-pill:hover svg{background:#f3f4f7;color:#13151b;transform:translateX(3px)} .ds-edit-pill:active{transform:translateY(1px)} .ds-edit-pill:focus-visible{outline:2px solid #2545d6;outline-offset:4px} .ds-edit-pill--ink{border-color:#13151b;background:#13151b;color:#f3f4f7} .ds-edit-pill--ink svg{background:#f3f4f7;color:#13151b} .ds-edit-pill--ink:hover{border-color:#2545d6;background:#2545d6}"
+    },
+    {
+      "name": "Storefront: Block Button",
+      "kind": "button",
+      "refersTo": "edit-block-button",
+      "description": "Storefront. Square ink button in label type; one supporting action under the statement.",
+      "html": "<a class=\"ds-edit-block\" href=\"#\">Ask us what you need</a>",
+      "css": ".ds-edit-block{display:inline-flex;align-items:center;min-height:3rem;padding:0.8rem 1.6rem;background:#13151b;color:#f3f4f7;font-family:'Hanken Grotesk Variable','Hanken Grotesk',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-decoration:none;text-transform:uppercase;transition:background 0.35s cubic-bezier(0.16,1,0.3,1)} .ds-edit-block:hover{background:#2545d6} .ds-edit-block:focus-visible{outline:2px solid #2545d6;outline-offset:4px}"
+    },
+    {
+      "name": "Storefront: Product Tile",
+      "kind": "card",
+      "refersTo": "edit-product-tile",
+      "description": "Storefront. Cut-out on a square Tile White field with a reveal panel on hover or focus; caption centred beneath. The drawing stands in for a cut-out photograph.",
+      "html": "<a class=\"ds-edit-item\" href=\"#\"><span class=\"ds-edit-item__tile\"><svg viewBox=\"0 0 60 68\" aria-hidden=\"true\"><rect x=\"8\" y=\"6\" width=\"44\" height=\"54\" rx=\"2\" fill=\"#2b2e36\"/><rect x=\"12\" y=\"10\" width=\"30\" height=\"46\" fill=\"#15181f\"/><circle cx=\"27\" cy=\"22\" r=\"7\" fill=\"none\" stroke=\"#a9adb8\" stroke-width=\"1.5\"/><circle cx=\"27\" cy=\"44\" r=\"7\" fill=\"none\" stroke=\"#a9adb8\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"60\" width=\"8\" height=\"3\" fill=\"#1d2027\"/><rect x=\"40\" y=\"60\" width=\"8\" height=\"3\" fill=\"#1d2027\"/></svg><span class=\"ds-edit-item__peek\"><span>ASUS TUF Gaming RTX 5080 OC</span><span>Samsung 990 Pro 1TB NVMe</span><b>Ask about this build</b></span></span><span class=\"ds-edit-item__name\">Ryzen 7 9800X3D</span><span class=\"ds-edit-item__sub\">RTX 5080</span><span class=\"ds-edit-item__price\">S$4,999</span></a>",
+      "css": ".ds-edit-item{display:grid;justify-items:center;width:16rem;text-align:center;text-decoration:none;color:#13151b;font-family:'Hanken Grotesk Variable','Hanken Grotesk',sans-serif;line-height:1.6} .ds-edit-item__tile{position:relative;display:grid;place-items:center;width:100%;aspect-ratio:1 / 1.14;overflow:hidden;background:#fbfbfd} .ds-edit-item__tile svg{width:78%;height:78%;filter:drop-shadow(0 18px 18px rgb(19 21 27 / 0.2));transition:transform 0.7s cubic-bezier(0.16,1,0.3,1)} .ds-edit-item__peek{position:absolute;inset:auto 0 0;display:grid;gap:0.2rem;padding:1rem 1rem 1.1rem;background:#13151b;color:#c9cedb;font-size:0.8125rem;line-height:1.35;transform:translateY(101%);transition:transform 0.55s cubic-bezier(0.16,1,0.3,1)} .ds-edit-item__peek b{margin-top:0.55rem;color:#fff;font-size:0.6875rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase} .ds-edit-item:hover .ds-edit-item__peek,.ds-edit-item:focus-visible .ds-edit-item__peek{transform:none} .ds-edit-item:hover svg,.ds-edit-item:focus-visible svg{transform:translateY(-9%) scale(0.94)} .ds-edit-item__name{margin-top:1.1rem;font-weight:600;line-height:1.3} .ds-edit-item__sub{color:#555c6c;font-size:0.9375rem} .ds-edit-item__price{margin-top:0.25rem;font-size:0.9375rem;font-variant-numeric:tabular-nums} .ds-edit-item:focus-visible{outline:2px solid #2545d6;outline-offset:4px}"
+    },
+    {
+      "name": "Storefront: Header",
+      "kind": "nav",
+      "refersTo": "edit-top-bar-scrolled",
+      "description": "Storefront. Scrolled state of the fixed header: wordmark, label-and-value facts, stacked section links, pill.",
+      "html": "<header class=\"ds-edit-top\"><a class=\"ds-edit-logo\" href=\"#\">Excelsior</a><dl class=\"ds-edit-facts\"><div><dt>Built in</dt><dd>Ang Mo Kio, Singapore</dd></div><div><dt>On Carousell</dt><dd>5.0 from 1,682 reviews</dd></div></dl><nav class=\"ds-edit-nav\"><a href=\"#\">Ranges</a><a href=\"#\">Builds</a><a href=\"#\">Reviews</a><a href=\"#\">Visit</a></nav><a class=\"ds-edit-pill\" href=\"#\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h10M9 4l4 4-4 4\"/></svg>Message us</a></header>",
+      "css": ".ds-edit-pill{display:inline-flex;align-items:center;gap:0.75rem;min-height:3rem;padding:0.35rem 1.35rem 0.35rem 0.4rem;border:1px solid #d3d6df;border-radius:999px;background:#fbfbfd;color:#13151b;font-family:'Hanken Grotesk Variable','Hanken Grotesk',sans-serif;font-size:0.875rem;font-weight:500;letter-spacing:0.02em;text-decoration:none;white-space:nowrap;box-shadow:0 10px 24px -14px rgb(19 21 27 / 0.35);transition:background 0.35s cubic-bezier(0.16,1,0.3,1),color 0.35s cubic-bezier(0.16,1,0.3,1),border-color 0.35s cubic-bezier(0.16,1,0.3,1)} .ds-edit-pill svg{width:2.2rem;height:2.2rem;padding:0.6rem;border-radius:50%;background:#13151b;color:#f3f4f7;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.45s cubic-bezier(0.16,1,0.3,1),background 0.35s cubic-bezier(0.16,1,0.3,1),color 0.35s cubic-bezier(0.16,1,0.3,1)} .ds-edit-pill:hover{border-color:#13151b;background:#13151b;color:#f3f4f7} .ds-edit-pill:hover svg{background:#f3f4f7;color:#13151b;transform:translateX(3px)} .ds-edit-pill:active{transform:translateY(1px)} .ds-edit-pill:focus-visible{outline:2px solid #2545d6;outline-offset:4px} .ds-edit-top{display:flex;align-items:center;gap:2.5rem;padding:1.1rem 2rem;border-bottom:1px solid #d3d6df;background:#f3f4f7;color:#13151b;font-family:'Hanken Grotesk Variable','Hanken Grotesk',sans-serif} .ds-edit-top .ds-edit-pill{min-height:2.75rem} .ds-edit-logo{font-family:'Bodoni Moda Variable','Bodoni Moda','Didot',serif;font-size:1.3rem;font-weight:500;letter-spacing:0.24em;line-height:1;text-decoration:none;text-transform:uppercase;color:inherit} .ds-edit-facts{display:flex;gap:2rem;margin:0} .ds-edit-facts dt{color:#555c6c;font-size:0.6875rem;letter-spacing:0.16em;text-transform:uppercase} .ds-edit-facts dd{margin:0;font-size:0.8125rem;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3} .ds-edit-nav{display:grid;justify-items:end;margin-left:auto;font-size:0.8125rem;line-height:1.25} .ds-edit-nav a{color:#555c6c;text-decoration:none;transition:color 0.3s cubic-bezier(0.16,1,0.3,1)} .ds-edit-nav a:hover{color:#13151b} .ds-edit-nav a:focus-visible,.ds-edit-logo:focus-visible{outline:2px solid #2545d6;outline-offset:4px}"
+    },
+    {
+      "name": "Teardown: Button",
+      "kind": "button",
+      "refersTo": "teardown-button",
+      "description": "Teardown. Solid Studio White button; hover fills with the current glow.",
+      "html": "<div class=\"ds-td-ground\"><a class=\"ds-td-btn\" href=\"#\">Message us on WhatsApp</a></div>",
+      "css": ".ds-td-ground{padding:1.5rem;background:#07080b} .ds-td-btn{display:inline-flex;align-items:center;min-height:3rem;padding:0.85rem 1.5rem;border:1px solid #eef1f6;border-radius:2px;background:#eef1f6;color:#05060a;font-family:'Archivo Variable','Archivo',sans-serif;font-stretch:112%;font-size:0.8125rem;font-weight:700;letter-spacing:0.09em;text-decoration:none;text-transform:uppercase;transition:background 0.3s cubic-bezier(0.16,1,0.3,1),border-color 0.3s cubic-bezier(0.16,1,0.3,1),color 0.3s cubic-bezier(0.16,1,0.3,1)} .ds-td-btn:hover{border-color:#2fb4ff;background:#2fb4ff} .ds-td-btn:active{transform:translateY(1px)} .ds-td-btn:focus-visible{outline:2px solid #2fb4ff;outline-offset:4px}"
+    },
+    {
+      "name": "Teardown: Line Button",
+      "kind": "button",
+      "refersTo": "teardown-button-line",
+      "description": "Teardown. Outlined header button; hover fills with glow and switches text to Dark on Light.",
+      "html": "<div class=\"ds-td-ground\"><a class=\"ds-td-btn ds-td-btn--line\" href=\"#\">WhatsApp us</a></div>",
+      "css": ".ds-td-ground{padding:1.5rem;background:#07080b} .ds-td-btn{display:inline-flex;align-items:center;min-height:2.75rem;padding:0.6rem 1.5rem;border:1px solid #eef1f6;border-radius:2px;background:#eef1f6;color:#05060a;font-family:'Archivo Variable','Archivo',sans-serif;font-stretch:112%;font-size:0.8125rem;font-weight:700;letter-spacing:0.09em;text-decoration:none;text-transform:uppercase;transition:background 0.3s cubic-bezier(0.16,1,0.3,1),border-color 0.3s cubic-bezier(0.16,1,0.3,1),color 0.3s cubic-bezier(0.16,1,0.3,1)} .ds-td-btn--line{background:transparent;color:#eef1f6} .ds-td-btn:hover{border-color:#2fb4ff;background:#2fb4ff} .ds-td-btn--line:hover{color:#05060a} .ds-td-btn:focus-visible{outline:2px solid #2fb4ff;outline-offset:4px}"
+    },
+    {
+      "name": "Teardown: Build Row",
+      "kind": "custom",
+      "refersTo": "teardown-build-row",
+      "description": "Teardown. One build per hairline-separated row, in place of cards: image, name, specs, price, prompt. The drawing stands in for a build photograph.",
+      "html": "<div class=\"ds-td-ground\"><a class=\"ds-td-row\" href=\"#\"><span class=\"ds-td-row__img\"><svg viewBox=\"0 0 60 68\" aria-hidden=\"true\"><rect x=\"8\" y=\"6\" width=\"44\" height=\"54\" rx=\"2\" fill=\"#2b2e36\"/><rect x=\"12\" y=\"10\" width=\"30\" height=\"46\" fill=\"#15181f\"/><circle cx=\"27\" cy=\"22\" r=\"7\" fill=\"none\" stroke=\"#a9adb8\" stroke-width=\"1.5\"/><circle cx=\"27\" cy=\"44\" r=\"7\" fill=\"none\" stroke=\"#a9adb8\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"60\" width=\"8\" height=\"3\" fill=\"#1d2027\"/><rect x=\"40\" y=\"60\" width=\"8\" height=\"3\" fill=\"#1d2027\"/></svg></span><span class=\"ds-td-row__name\"><b>Ryzen 7 9800X3D</b><span>RTX 5080</span></span><span class=\"ds-td-row__specs\">ASUS TUF Gaming RTX 5080 OC · 32GB DDR5 6000 · Samsung 990 Pro 1TB NVMe</span><span class=\"ds-td-row__price\">S$4,999</span><span class=\"ds-td-row__ask\">Ask about this build</span></a></div>",
+      "css": ".ds-td-ground{padding:1.5rem;background:#07080b} .ds-td-row{display:grid;grid-template-columns:6.5rem minmax(11rem,1fr) minmax(0,1.5fr) auto 11rem;align-items:center;gap:1.75rem;padding:1rem 0.75rem;border-block:1px solid #262a33;color:#eef1f6;font-family:'Archivo Variable','Archivo',sans-serif;font-size:1.0625rem;text-decoration:none;transition:background 0.35s cubic-bezier(0.16,1,0.3,1)} .ds-td-row:hover,.ds-td-row:focus-visible{background:#0f1116} .ds-td-row__img{display:grid;place-items:center;height:5.5rem} .ds-td-row__img svg{height:5.5rem;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1)} .ds-td-row:hover .ds-td-row__img svg{transform:scale(1.12)} .ds-td-row__name{display:grid;font-stretch:112%;line-height:1.25} .ds-td-row__name b{font-size:1.125rem;font-weight:700} .ds-td-row__name span{color:#2fb4ff;font-weight:600} .ds-td-row__specs{color:#a3aab8;font-size:0.9375rem;line-height:1.4} .ds-td-row__price{justify-self:end;font-stretch:125%;font-size:1.5rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1} .ds-td-row__ask{justify-self:end;color:#a3aab8;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s cubic-bezier(0.16,1,0.3,1)} .ds-td-row:hover .ds-td-row__ask,.ds-td-row:focus-visible .ds-td-row__ask{color:#2fb4ff} .ds-td-row:focus-visible{outline:2px solid #2fb4ff;outline-offset:4px}"
+    },
+    {
+      "name": "Teardown: Part Callout",
+      "kind": "custom",
+      "description": "Teardown. A glow dot on the part, a 1px leader at 55% glow, and an uppercase part name resting in a band above or below the model.",
+      "html": "<div class=\"ds-td-callout-stage\"><div class=\"ds-td-callout\"><i></i><u></u><b>Graphics card</b></div></div>",
+      "css": ".ds-td-callout-stage{position:relative;height:9rem;background:#07080b} .ds-td-callout{position:absolute;top:2rem;left:50%} .ds-td-callout i{position:absolute;top:-3px;left:-3px;width:6px;height:6px;border-radius:50%;background:#2fb4ff} .ds-td-callout u{position:absolute;top:0;left:0;width:1px;height:64px;background:color-mix(in srgb,#2fb4ff 55%,transparent)} .ds-td-callout b{position:absolute;top:64px;left:0;color:#eef1f6;font-family:'Archivo Variable','Archivo',sans-serif;font-stretch:112%;font-size:0.6875rem;font-weight:700;letter-spacing:0.12em;line-height:1;text-shadow:0 0 10px #07080b;text-transform:uppercase;white-space:nowrap;transform:translate(-50%,0.5rem)}"
+    },
+    {
+      "name": "Teardown: Progress Ticks",
+      "kind": "custom",
+      "description": "Teardown. Four 2px bars under the stage copy; the active chapter is longer and takes the glow.",
+      "html": "<div class=\"ds-td-ground\"><div class=\"ds-td-ticks\"><i></i><i class=\"ds-is-active\"></i><i></i><i></i></div></div>",
+      "css": ".ds-td-ground{padding:1.5rem;background:#07080b} .ds-td-ticks{display:flex;gap:0.5rem} .ds-td-ticks i{width:2.75rem;height:2px;background:#262a33;transition:background 0.5s cubic-bezier(0.16,1,0.3,1),width 0.5s cubic-bezier(0.16,1,0.3,1)} .ds-td-ticks i.ds-is-active{width:4.5rem;background:#2fb4ff}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Storefront / The Teardown (two competing worlds; one survives the client's choice)",
+    "overview": "Two worlds, one survivor. This repository deliberately holds two alternative visual worlds built as competing concepts for one client: World one, The Storefront (/edit/) and World two, The Teardown (/teardown/). The client will choose one. When they do, the other world is deleted: remove every token prefixed with the losing world (edit-* or teardown-*), every subsection headed with its name below, its stylesheet and its page, then drop the prefix from the survivor. Until then, the two worlds never mix on one surface. Everything recorded here was read from the shipped code on 1 October 2026, not from the plans.\n\nThe Storefront. PCs shown the way a fashion house shows a season. A cool porcelain page, ink-navy text and a high-contrast Didone serif, so that the only saturated colour on screen comes from the RGB lighting inside the build photographs. The hero is a ring of twelve build photos curving across the top of the viewport like the inside of a cylinder, drifting and draggable, with one cut-out PC standing in front of it. The density is editorial: large photographs, short lines of text, generous section padding, no containers around copy. Products sit as cut-outs on near-white tiles with centred captions. The single loud typographic moment is a heavy uppercase sans statement, \"We don't upsell.\", set against the serif everywhere else.\n\nThe Teardown. One PC, drawn entirely in code, sits on a black studio stage. As the visitor scrolls it comes apart along one axis into its parts, callouts name each one, and it goes back together. The scene is pinned for 520vh while four chapters of copy change beside it. The PC's own lighting is the accent colour: it moves from blue to violet to amber and back to blue across the scroll, and the stage's interface colour follows it. Below the stage the page is a plain dark document: wide, heavy, uppercase Archivo headings, a hairline-ruled list of builds with prices, staggered quotes, three steps, a photo and an address. No cards, no panels, no shadows.",
+    "keyCharacteristics": [
+      "Storefront: Light, cool, almost monochrome chrome; photographs supply the colour.",
+      "Storefront: Bodoni Moda headings with an italic closing phrase in slate.",
+      "Storefront: Pill buttons with a round arrow badge; one square ink block button.",
+      "Storefront: Cut-out PCs with soft grounding shadows on near-white tiles.",
+      "Storefront: Motion you can touch: a draggable photo ring, hover reveals, two photos drifting at different rates.",
+      "Teardown: Near-black ground, one cool off-white for text, one glow colour at a time.",
+      "Teardown: Archivo at three widths; display is 125% wide, weight 800, uppercase.",
+      "Teardown: Square controls (2px corners), hairline rules, lists instead of cards.",
+      "Teardown: Scroll is the only driver of the scene; nothing autoplays beyond fan spin and a slow sway.",
+      "Teardown: A complete static fallback when WebGL or scripting is unavailable."
+    ],
+    "rules": [
+      {
+        "name": "The Photos Are the Colour Rule",
+        "body": "Ground, text and rules stay inside the blue-grey family. Every saturated hue visible at rest belongs to a build photograph.",
+        "section": "colors",
+        "world": "storefront"
+      },
+      {
+        "name": "The Accent on Touch Rule",
+        "body": "Cobalt appears only as a response: hover and focus. Nothing is cobalt at rest.",
+        "section": "colors",
+        "world": "storefront"
+      },
+      {
+        "name": "The Haze Is Display-Only Rule",
+        "body": "Haze reaches 4.24:1 on Porcelain. It is for the italic display phrase and for dots, never for body-size text. Secondary text is Slate.",
+        "section": "colors",
+        "world": "storefront"
+      },
+      {
+        "name": "The One Light Rule",
+        "body": "There is one glow colour at a time and the interface accent is that colour. Inside the stage it travels with the scroll; outside the stage it holds at Rig Blue. Photographs keep their own colour.",
+        "section": "colors",
+        "world": "teardown"
+      },
+      {
+        "name": "The Dark on Glow Rule",
+        "body": "Text on a glow fill or on Studio White is Dark on Light, never Studio White.",
+        "section": "colors",
+        "world": "teardown"
+      },
+      {
+        "name": "The Italic Second Line Rule",
+        "body": "A serif heading may turn its closing phrase to italic in Haze: \"Built to *your budget.*\", \"Recent *builds*\", \"You can only do *better.*\". One phrase per heading, always the last.",
+        "section": "typography",
+        "world": "storefront"
+      },
+      {
+        "name": "The Label Names Something Rule",
+        "body": "Tracked uppercase is for a control, a fact's name, a marquee item or a footer column. It labels a thing; it never sits above a headline as an introduction to it.",
+        "section": "typography",
+        "world": "storefront"
+      },
+      {
+        "name": "The Three Widths Rule",
+        "body": "125% for display, prices, the wordmark and the marquee. 112% for buttons, callouts, build names and step titles. 100% for paragraphs, quotes, links and spec lines.",
+        "section": "typography",
+        "world": "teardown"
+      },
+      {
+        "name": "The Uppercase Stops at Titles Rule",
+        "body": "Headings and labels are uppercase. Step titles, build names, quotes and paragraphs are sentence case.",
+        "section": "typography",
+        "world": "teardown"
+      },
+      {
+        "name": "The Grounding Shadow Rule",
+        "body": "A shadow sits under an object: a cut-out PC, a photograph, the pill. It never outlines a section or lifts a block of text.",
+        "section": "elevation",
+        "world": "storefront"
+      },
+      {
+        "name": "The Scene Holds the Depth Rule",
+        "body": "Outside the canvas nothing floats: no box shadows, no raised panels. Hover changes tone, not height.",
+        "section": "elevation",
+        "world": "teardown"
+      }
+    ],
+    "dos": [
+      "Do end every call to action in a WhatsApp link with a prefilled message. It is the only primary action in either world.",
+      "Do use `cubic-bezier(0.16, 1, 0.3, 1)` for transitions and honour `prefers-reduced-motion` the way each build does: stop the autoplay, keep the content.",
+      "Do keep buttons at least 3rem tall (2.75rem in the fixed header) and give every focusable element the 2px accent outline at 4px offset.",
+      "Do use only images recorded in `src/assets/README.md`, and add provenance for any new one.",
+      "Do let the build photographs supply the colour; keep chrome inside Porcelain, Ink Navy, Slate and Haze.",
+      "Do set headings in Bodoni Moda at weight 400 and, where the sentence allows, turn the closing phrase italic in Haze.",
+      "Do show products as cut-outs on Tile White with a soft, ink-tinted drop shadow.",
+      "Do use the pill with its arrow badge for the WhatsApp action and reserve the block button for a single supporting action.",
+      "Do switch to Haze on Ink and Mist on Ink when text sits on Ink Navy.",
+      "Do take the accent from the glow: one colour at a time, shifting only inside the stage, Rig Blue everywhere else.",
+      "Do set headings in Archivo at 125% width, weight 800, uppercase, line-height 0.96.",
+      "Do list builds as hairline-separated rows with the price in the Price voice.",
+      "Do keep the scene scroll-driven, and keep the static fallback complete whenever chapter copy changes.",
+      "Do put Dark on Light text on any glow or Studio White fill."
+    ],
+    "donts": [
+      "Don't mix the worlds. No Storefront token, font or component on a Teardown surface, and none the other way.",
+      "Don't treat the chooser page as a pattern source. It is scaffolding for the client's decision.",
+      "Don't keep the losing world's tokens after the client chooses.",
+      "Don't show Cobalt at rest. It is the hover and focus colour only.",
+      "Don't set body-size text in Haze; use Slate.",
+      "Don't put a shadow on a section or a block of text. Shadows ground objects.",
+      "Don't fill a section with a saturated colour. The dark surfaces are Ink Navy only: the closing band and the reveal panel.",
+      "Don't repeat the heavy uppercase sans statement. It works because it happens once.",
+      "Don't add box shadows, cards or raised panels. Depth belongs to the scene; hover changes tone.",
+      "Don't round the corners of controls, images or rows beyond 2px.",
+      "Don't introduce a second accent hue outside the stage, or a glow colour the scene is not showing.",
+      "Don't autoplay the teardown or add motion that scroll does not drive, beyond fan spin and the slow sway.",
+      "Don't set paragraphs, quotes or spec lines in the 125% width or in uppercase."
+    ]
+  }
+}

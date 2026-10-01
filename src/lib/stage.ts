@@ -205,7 +205,7 @@ export function mountStage(section: HTMLElement): boolean {
       : lerp(lerp(17.5, 24, explode), 16.5, close);
     target.z = lerp(0, 1, explode);
     // on a phone the open build drops a little so the top callouts clear it
-    target.y = -0.15 + (narrow ? explode * 0.9 : 0);
+    target.y = -0.15 + (narrow ? explode * 1.7 : 0);
     camera.position.set(
       target.x + radius * Math.sin(yaw) * Math.cos(pitch),
       target.y + radius * Math.sin(pitch),

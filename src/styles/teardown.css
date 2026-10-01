@@ -325,8 +325,14 @@ h2 {
   bottom: 15vh;
   left: var(--gutter);
   display: block;
-  width: min(30rem, 34vw);
+  width: min(33rem, 39vw);
   max-width: none;
+}
+
+/* the open build reaches further left, so the two middle chapters run narrower */
+.is-live .chapter:nth-child(2),
+.is-live .chapter:nth-child(3) {
+  max-width: min(30rem, 34vw);
 }
 
 .is-live .chapter {
@@ -835,6 +841,10 @@ h2 {
     display: block;
     background: linear-gradient(to bottom, transparent, var(--stage) 46%);
     pointer-events: none;
+  }
+
+  .is-live .chapter:nth-child(n) {
+    max-width: none;
   }
 
   .is-live .chapters {
